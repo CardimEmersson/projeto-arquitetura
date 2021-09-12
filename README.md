@@ -59,7 +59,7 @@ Tecnologias utilizadas:
   * Camada intermediária entre o repository e o controller.
 <!--te-->
 
-* <b>EXECUÇÃO DO DOCKER</b>
+## EXECUÇÃO DO DOCKER
 ```bash
 # Entre na pasta 'api-gateway' e excute o comando para gerar a imagem do gateway
 $ docker build -t ifba/gateway:v1 .
