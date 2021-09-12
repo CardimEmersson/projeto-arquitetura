@@ -58,3 +58,26 @@ Tecnologias utilizadas:
 * <b>SERVICES</b>
   * Camada intermediária entre o repository e o controller.
 <!--te-->
+
+* <b>EXECUÇÃO DO DOCKER</b>
+* ```bash
+# Entre na pasta 'api-gateway' e excute o comando para gerar a imagem do gateway
+$ docker build -t ifba/gateway:v1 .
+
+# Entre na pasta 'microservice-curso' e excute o comando para gerar a imagem do curso
+$ docker build -t ifba/servicecurso:v1 .
+
+# Entre na pasta 'monolith-ifba' e excute o comando para gerar a imagem do ifba
+$ docker build -t ifba/ifba:v1 .
+
+# Vá até a raiz do projeto e execute o comando para executar os containers
+$ docker stack deploy -c docker-compose.yml servicecurso
+
+# O comando abaixo irá listar os serviços em execução
+$ docker service ls
+
+
+# O comando abaixo irá replicar os container para gerar a alta disponibilidade, no exemplo 5 containers
+$ docker service update --replicas 5 <service name>
+
+```
