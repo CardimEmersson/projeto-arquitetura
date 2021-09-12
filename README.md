@@ -60,7 +60,7 @@ Tecnologias utilizadas:
 <!--te-->
 
 * <b>EXECUÇÃO DO DOCKER</b>
-* ```bash
+```bash
 # Entre na pasta 'api-gateway' e excute o comando para gerar a imagem do gateway
 $ docker build -t ifba/gateway:v1 .
 
