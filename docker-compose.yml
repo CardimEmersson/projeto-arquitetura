@@ -1,0 +1,50 @@
+version: "3.1"
+services:
+  api:
+    image: "ifba/servicecurso:v1"
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://PostgreSQL:5432/ms-course
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  ifba:
+    image: "ifba/ifba:v1"
+    ports:
+      - "8081:8081"
+
+  gateway:
+    image: "ifba/gateway:v1"
+    ports:
+      - "8082:8082"
+
+  PostgreSQL:
+    image: "postgres"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=root
+      - POSTGRES_DB=ms-course
+# http://localhost:8080/home
+# http://localhost:8080/enviando-curso
+
+# http://localhost:8081/sistema-ifba
+
+# http://localhost:8082/ifba
+# http://localhost:8082/microservice-curso-home
+# http://localhost:8082/microservice-curso
+
+# docker build -t ms-curso .
+# docker swarm init
+# docker node ls
+# docker service create --name <service name> <image name>
+# docker service ls
+# docker stack deploy -c docker-compose.yml nomedoservico
+# docker service update --publish-add 8080:8080 servicecurso
+# docker service update --replicas 5 servicecurso_API
+
+# docker service rm <SERVICE>
+# docker kill <SERVICE>

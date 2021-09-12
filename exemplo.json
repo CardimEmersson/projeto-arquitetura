@@ -1,0 +1,35 @@
+{
+  "nomeCurso": "Ciência de Dados",
+  "qtdPeriodo": 8,
+  "cargaHoraria": 1000,
+  "descricaoCurso": "Descrição",
+  "listaMaterias": [{
+      "nomeMateria": "Lógica de Programação",
+      "cargaHoraria": 50,
+      "descricaoMateria": "muito algoritimo e visualG",
+      "listaRequisitos": [{
+          "descricaoRequisito": "descricao 1"
+        },
+        {
+          "descricaoRequisito": "descricao 2"
+        }
+      ],
+      "creditos": 2,
+      "ementa": "ementa do curso"
+    },
+    {
+      "nomeMateria": "Algoritimos Genéticos",
+      "cargaHoraria": 50,
+      "descricaoMateria": "Muito complicado",
+      "listaRequisitos": [{
+          "descricaoRequisito": "descricao 3"
+        },
+        {
+          "descricaoRequisito": "descricao 4"
+        }
+      ],
+      "creditos": 5,
+      "ementa": "ementa do curso"
+    }
+  ]
+}
